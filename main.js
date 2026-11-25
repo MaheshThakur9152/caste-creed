@@ -8,8 +8,8 @@ const canvas = $('[data-ring]');
 const ctx = canvas.getContext('2d');
 const N = +canvas.dataset.frames;
 const degEl = $('[data-deg]');
-const ring = { intro: 0, scroll: 0 };
-const current = () => ((Math.round(ring.intro + ring.scroll) % N) + N) % N;
+const ring = { scroll: 0 };
+const current = () => ((Math.round(ring.scroll) % N) + N) % N;
 const frames = Array.from({ length: N }, (_, i) => {
   const im = new Image();
   im.decoding = 'async';
@@ -50,11 +50,6 @@ menuBtn.addEventListener('click', () => setMenu(menu.hidden));
 menu.addEventListener('click', (e) => e.target.closest('a') && setMenu(false));
 
 /* ---------- Collection arrows (native scroll mode) ---------- */
-const track = $('[data-track]');
-$$('[data-scroll]').forEach((b) => b.addEventListener('click', () => {
-  track.scrollBy({ left: +b.dataset.scroll * track.firstElementChild.offsetWidth, behavior: 'smooth' });
-}));
-
 /* ---------- Process steps ---------- */
 const steps = $('[data-steps]');
 const items = [...steps.children];
@@ -134,8 +129,8 @@ if (hasGsap) {
   document.fonts.ready.then(() => {
     const split = (el, type = 'lines') => SplitText.create(el, { type: type === 'words' ? 'lines,words' : 'lines', mask: 'lines', linesClass: 'split-line' });
 
-    mm.add({ motion: '(prefers-reduced-motion: no-preference)', desktop: '(min-width: 1025px)', phone: '(max-width: 700px)' }, (c) => {
-      const { motion, desktop, phone } = c.conditions;
+    mm.add({ any: 'all', motion: '(prefers-reduced-motion: no-preference)', phone: '(max-width: 700px)' }, (c) => {
+      const { motion, phone } = c.conditions;
       gsap.set('[data-intro]', { visibility: 'visible' });
       if (!motion) return;
 
@@ -145,18 +140,17 @@ if (hasGsap) {
       gsap.timeline({ defaults: { ease: 'expo.out', duration: 1.3 } })
         .from(nav, { yPercent: -100, duration: 1, clearProps: 'transform' }, 0)
         .from('.hero__stage', { autoAlpha: 0, scale: 1.08, duration: 1.8 }, 0)
-        .fromTo(ring, { intro: -N * 0.35 }, { intro: 0, duration: 2.4, ease: 'power3.out', onUpdate: draw }, 0)
         .from('.hero .tag', { autoAlpha: 0, y: 12, duration: .8 }, .3)
         .from(h1.words, { yPercent: 110, stagger: .06 }, .35)
         .from(hp.lines, { yPercent: 110, stagger: .08 }, .55)
         .from('.hero__buy > *', { autoAlpha: 0, y: 16, stagger: .08 }, .7)
         .from('.hero__sub a, .hero__hint', { autoAlpha: 0, y: 10, stagger: .06 }, .9);
 
-      /* Hero: pinned, scroll turns the ring one full revolution */
+      /* Hero: pinned, scroll turns the ring a slow half revolution (a full 360° read as dizzy) */
       gsap.timeline({
-        scrollTrigger: { trigger: '.hero', start: 'top top', end: phone ? '+=90%' : '+=160%', pin: true, scrub: .8, anticipatePin: 1 },
+        scrollTrigger: { trigger: '.hero', start: 'top top', end: phone ? '+=90%' : '+=160%', pin: true, scrub: 1.2, anticipatePin: 1 },
       })
-        .to(ring, { scroll: N, ease: 'none', onUpdate: draw, duration: 1 }, 0)
+        .to(ring, { scroll: N / 2, ease: 'power1.inOut', onUpdate: draw, duration: 1 }, 0)
         .to('.hero__copy', { yPercent: -18, autoAlpha: 0, ease: 'power2.in', duration: .35 }, .6)
         .to('.hero__sub', { autoAlpha: 0, duration: .2 }, .6)
         .to('.hero__stage', { scale: .9, ease: 'power1.in', duration: .4 }, .6);
@@ -181,21 +175,11 @@ if (hasGsap) {
       /* Collection */
       const ch = split('.collection h2');
       gsap.from(ch.lines, { yPercent: 110, stagger: .1, duration: 1.2, ease: 'expo.out', scrollTrigger: { trigger: '.collection', start: 'top 75%' } });
-      const cards = $$('li', track);
-      if (desktop) {
-        const coll = $('.collection');
-        coll.classList.add('is-pinned');
-        const dist = () => track.scrollWidth - track.clientWidth;
-        gsap.timeline({
-          scrollTrigger: { trigger: coll, start: 'top top', end: () => '+=' + dist() * 1.1, pin: true, scrub: .8, invalidateOnRefresh: true },
-        })
-          .to(track, { x: () => -dist(), ease: 'none' }, 0)
-          .fromTo('.collection__progress i', { scaleX: 0 }, { scaleX: 1, ease: 'none' }, 0)
-          .fromTo(cards.map((li) => $('img', li)), { xPercent: -8, scale: 1.18 }, { xPercent: 8, scale: 1.18, ease: 'none' }, 0);
-        gsap.from(cards, { yPercent: 18, autoAlpha: 0, stagger: .08, duration: 1.3, ease: 'expo.out', scrollTrigger: { trigger: coll, start: 'top 70%' } });
-        return () => { coll.classList.remove('is-pinned'); };
-      }
-      gsap.from(cards, { x: 60, autoAlpha: 0, stagger: .08, duration: 1.1, ease: 'expo.out', scrollTrigger: { trigger: track, start: 'top 85%' } });
+      gsap.from('.collection__all', { autoAlpha: 0, y: 12, duration: .8, ease: 'power3.out', scrollTrigger: { trigger: '.collection', start: 'top 75%' } });
+      ScrollTrigger.batch('.card', {
+        start: 'top 90%', once: true,
+        onEnter: (els) => gsap.from(els, { yPercent: 14, autoAlpha: 0, stagger: .1, duration: 1.1, ease: 'expo.out' }),
+      });
     });
 
     mm.add('(prefers-reduced-motion: no-preference)', () => {
@@ -261,7 +245,7 @@ if (hasGsap) {
 
       /* Magnetic buttons */
       if (!matchMedia('(hover: hover)').matches) return;
-      $$('.btn, .collection__arrows button, .footer__news button').forEach((b) => {
+      $$('.btn, .footer__news button').forEach((b) => {
         const xTo = gsap.quickTo(b, 'x', { duration: .5, ease: 'power3.out' });
         const yTo = gsap.quickTo(b, 'y', { duration: .5, ease: 'power3.out' });
         b.addEventListener('mousemove', (e) => {

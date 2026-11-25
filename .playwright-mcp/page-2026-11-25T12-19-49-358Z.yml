@@ -1,0 +1,389 @@
+- generic [active] [ref=e1]:
+  - dialog "cookieconsent" [ref=e2]:
+    - generic [ref=e3]:
+      - text: This website uses cookies to ensure you get the best experience on our website.
+      - button "learn more about cookies" [ref=e4] [cursor=pointer]: Learn More
+    - button "dismiss cookie message" [ref=e6]: Got it!
+  - link "Skip to content" [ref=e7] [cursor=pointer]:
+    - /url: "#MainContent"
+  - generic [ref=e10]:
+    - region "Announcement bar" [ref=e11]:
+      - generic [ref=e12]:
+        - button "Previous announcement" [ref=e13] [cursor=pointer]
+        - generic [ref=e17]:
+          - group [aria-hidden] [ref=e18]:
+            - region [ref=e19]:
+              - paragraph [ref=e20]: Easy Returns and Exchange
+          - group "2 of 3" [ref=e21]:
+            - region "Announcement" [ref=e22]:
+              - paragraph [ref=e23]: COD available
+          - group [aria-hidden] [ref=e24]:
+            - region [ref=e25]:
+              - paragraph [ref=e26]: Free Shipping Pan India
+        - button "Next announcement" [ref=e27] [cursor=pointer]
+    - generic [ref=e34]:
+      - heading "Country/region" [level=2] [ref=e35]
+      - button "India | INR ₹" [ref=e37] [cursor=pointer]
+  - banner [ref=e43]:
+    - heading [level=1] [ref=e44]:
+      - link [ref=e45] [cursor=pointer]:
+        - /url: /
+        - img "Beyond Extremes" [ref=e47]
+    - navigation [ref=e48]:
+      - list [ref=e49]:
+        - listitem [ref=e50]:
+          - link "Home" [ref=e51] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e53]:
+          - link "Treasure🔓" [ref=e54] [cursor=pointer]:
+            - /url: /collections/treasure
+        - listitem [ref=e56]:
+          - group [ref=e58]:
+            - button "Shop" [ref=e59] [cursor=pointer]
+        - listitem [ref=e63]:
+          - link "Contact Us" [ref=e64] [cursor=pointer]:
+            - /url: /pages/contact-us
+    - generic [ref=e66]:
+      - generic [ref=e70]:
+        - heading "Country/region" [level=2] [ref=e71]
+        - button "India | INR ₹" [ref=e73] [cursor=pointer]
+      - group [ref=e78]:
+        - button "Search" [ref=e79] [cursor=pointer]
+      - link "Log in" [ref=e84] [cursor=pointer]:
+        - /url: /account/login
+      - link "Cart" [ref=e90] [cursor=pointer]:
+        - /url: /cart
+  - main [ref=e95]:
+    - generic [ref=e97] [cursor=pointer]
+    - generic [ref=e104]:
+      - list "Slider" [ref=e106]:
+        - listitem [ref=e107]:
+          - generic [ref=e109]:
+            - generic [ref=e112]:
+              - img "Kings cap in Malfy" [ref=e113]
+              - img "Kings cap in Malfy" [ref=e114]
+            - generic [ref=e117]:
+              - heading [level=3] [ref=e118]:
+                - link "Kings cap in Malfy" [ref=e119] [cursor=pointer]:
+                  - /url: /products/kings-cap-in-malfy
+              - generic [ref=e123]:
+                - generic [ref=e124]: Regular price
+                - generic [ref=e125]: MRP ₹ 3,200.00
+        - listitem [ref=e126]:
+          - generic [ref=e128]:
+            - generic [ref=e131]:
+              - img "Kings cap in Afternoon Stripes" [ref=e132]
+              - img "Kings cap in Afternoon Stripes" [ref=e133]
+            - generic [ref=e136]:
+              - heading [level=3] [ref=e137]:
+                - link "Kings cap in Afternoon Stripes" [ref=e138] [cursor=pointer]:
+                  - /url: /products/kings-cap-in-afternoon-stripes
+              - generic [ref=e142]:
+                - generic [ref=e143]: Regular price
+                - generic [ref=e144]: MRP ₹ 3,200.00
+        - listitem [ref=e145]:
+          - generic [ref=e147]:
+            - generic [ref=e150]:
+              - img "Kings cap in Crown" [ref=e151]
+              - img "Kings cap in Crown" [ref=e152]
+            - generic [ref=e155]:
+              - heading [level=3] [ref=e156]:
+                - link "Kings cap in Crown" [ref=e157] [cursor=pointer]:
+                  - /url: /products/kings-cap-in-crown
+              - generic [ref=e161]:
+                - generic [ref=e162]: Regular price
+                - generic [ref=e163]: MRP ₹ 3,500.00
+        - listitem [ref=e164]:
+          - generic [ref=e166]:
+            - generic [ref=e169]:
+              - img "Long Sleeve Polo in Pluto [Unisex]" [ref=e170]
+              - img "Long Sleeve Polo in Pluto [Unisex]" [ref=e171]
+            - generic [ref=e174]:
+              - heading [level=3] [ref=e175]:
+                - link "Long Sleeve Polo in Pluto [Unisex]" [ref=e176] [cursor=pointer]:
+                  - /url: /products/long-sleeve-polo-in-pluto-unisex
+              - generic [ref=e180]:
+                - generic [ref=e181]: Regular price
+                - generic [ref=e182]: MRP ₹ 6,000.00
+        - listitem [ref=e183]:
+          - generic [ref=e185]:
+            - generic [ref=e188]:
+              - img "Long Sleeve Polo in Jupiter [Unisex]" [ref=e189]
+              - img "Long Sleeve Polo in Jupiter [Unisex]" [ref=e190]
+            - generic [ref=e193]:
+              - heading [level=3] [ref=e194]:
+                - link "Long Sleeve Polo in Jupiter [Unisex]" [ref=e195] [cursor=pointer]:
+                  - /url: /products/long-sleeve-polo-in-jupiter-unisex
+              - generic [ref=e199]:
+                - generic [ref=e200]: Regular price
+                - generic [ref=e201]: MRP ₹ 6,000.00
+        - listitem [ref=e202]:
+          - generic [ref=e204]:
+            - generic [ref=e207]:
+              - img "Bouquet T-shirt in Vintage Black [Unisex]" [ref=e208]
+              - img "Bouquet T-shirt in Vintage Black [Unisex]" [ref=e209]
+            - generic [ref=e212]:
+              - heading [level=3] [ref=e213]:
+                - link "Bouquet T-shirt in Vintage Black [Unisex]" [ref=e214] [cursor=pointer]:
+                  - /url: /products/bouquet-t-shirt-in-vintage-black-unisex
+              - generic [ref=e218]:
+                - generic [ref=e219]: Regular price
+                - generic [ref=e220]: MRP ₹ 4,000.00
+        - listitem [ref=e221]:
+          - generic [ref=e223]:
+            - generic [ref=e226]:
+              - img "Bouquet T-shirt in Cream [Unisex]" [ref=e227]
+              - img "Bouquet T-shirt in Cream [Unisex]" [ref=e228]
+            - generic [ref=e231]:
+              - heading [level=3] [ref=e232]:
+                - link "Bouquet T-shirt in Cream [Unisex]" [ref=e233] [cursor=pointer]:
+                  - /url: /products/bouquet-t-shirt-in-cream-unisex
+              - generic [ref=e237]:
+                - generic [ref=e238]: Regular price
+                - generic [ref=e239]: MRP ₹ 4,000.00
+        - listitem [ref=e240]:
+          - generic [ref=e242]:
+            - generic [ref=e245]:
+              - img "3 T-shirt in White [Unisex]" [ref=e246]
+              - img "3 T-shirt in White [Unisex]" [ref=e247]
+            - generic [ref=e250]:
+              - heading [level=3] [ref=e251]:
+                - link "3 T-shirt in White [Unisex]" [ref=e252] [cursor=pointer]:
+                  - /url: /products/3-t-shirt-in-white-unisex
+              - generic [ref=e256]:
+                - generic [ref=e257]: Regular price
+                - generic [ref=e258]: MRP ₹ 3,500.00
+        - listitem [ref=e259]:
+          - generic [ref=e261]:
+            - generic [ref=e264]:
+              - img "Seersucker Shirt in Afternoon Stripes" [ref=e265]
+              - img "Seersucker Shirt in Afternoon Stripes" [ref=e266]
+            - generic [ref=e269]:
+              - heading [level=3] [ref=e270]:
+                - link "Seersucker Shirt in Afternoon Stripes" [ref=e271] [cursor=pointer]:
+                  - /url: /products/seersucker-shirt-in-afternoon-stripes
+              - generic [ref=e275]:
+                - generic [ref=e276]: Regular price
+                - generic [ref=e277]: MRP ₹ 5,000.00
+        - listitem [ref=e278]:
+          - generic [ref=e280]:
+            - generic [ref=e283]:
+              - img "Seersucker Shirt in Morning Stripes" [ref=e284]
+              - img "Seersucker Shirt in Morning Stripes" [ref=e285]
+            - generic [ref=e288]:
+              - heading [level=3] [ref=e289]:
+                - link "Seersucker Shirt in Morning Stripes" [ref=e290] [cursor=pointer]:
+                  - /url: /products/seersucker-shirt-in-morning-stripes
+              - generic [ref=e294]:
+                - generic [ref=e295]: Regular price
+                - generic [ref=e296]: MRP ₹ 5,000.00
+        - listitem [ref=e297]:
+          - generic [ref=e299]:
+            - generic [ref=e302]:
+              - img "Oxford shirt in Outdoor Stripes" [ref=e303]
+              - img "Oxford shirt in Outdoor Stripes" [ref=e304]
+            - generic [ref=e307]:
+              - heading [level=3] [ref=e308]:
+                - link "Oxford shirt in Outdoor Stripes" [ref=e309] [cursor=pointer]:
+                  - /url: /products/oxford-shirt-in-outdoor-stripes
+              - generic [ref=e313]:
+                - generic [ref=e314]: Regular price
+                - generic [ref=e315]: MRP ₹ 5,000.00
+        - listitem [ref=e316]:
+          - generic [ref=e318]:
+            - generic [ref=e321]:
+              - img "Oxford shirt in Uniform Stripes" [ref=e322]
+              - img "Oxford shirt in Uniform Stripes" [ref=e323]
+            - generic [ref=e326]:
+              - heading [level=3] [ref=e327]:
+                - link "Oxford shirt in Uniform Stripes" [ref=e328] [cursor=pointer]:
+                  - /url: /products/oxford-shirt-in-uniform-stripes
+              - generic [ref=e332]:
+                - generic [ref=e333]: Regular price
+                - generic [ref=e334]: MRP ₹ 5,000.00
+        - listitem [ref=e335]:
+          - generic [ref=e337]:
+            - generic [ref=e340]:
+              - img "3 T-shirt in Green [Unisex]" [ref=e341]
+              - img "3 T-shirt in Green [Unisex]" [ref=e342]
+            - generic [ref=e345]:
+              - heading [level=3] [ref=e346]:
+                - link "3 T-shirt in Green [Unisex]" [ref=e347] [cursor=pointer]:
+                  - /url: /products/3-t-shirt-in-green-unisex-1
+              - generic [ref=e351]:
+                - generic [ref=e352]: Regular price
+                - generic [ref=e353]: MRP ₹ 3,500.00
+        - listitem [ref=e354]:
+          - generic [ref=e356]:
+            - generic [ref=e359]:
+              - img "3 T-shirt in Navy Blue [Unisex]" [ref=e360]
+              - img "3 T-shirt in Navy Blue [Unisex]" [ref=e361]
+            - generic [ref=e364]:
+              - heading [level=3] [ref=e365]:
+                - link "3 T-shirt in Navy Blue [Unisex]" [ref=e366] [cursor=pointer]:
+                  - /url: /products/3-t-shirt-unisex-navy-blue
+              - generic [ref=e370]:
+                - generic [ref=e371]: Regular price
+                - generic [ref=e372]: MRP ₹ 3,500.00
+        - listitem [ref=e373]:
+          - generic [ref=e375]:
+            - generic [ref=e378]:
+              - img "3 T-shirt in Red [Unisex]" [ref=e379]
+              - img "3 T-shirt in Red [Unisex]" [ref=e380]
+            - generic [ref=e383]:
+              - heading [level=3] [ref=e384]:
+                - link "3 T-shirt in Red [Unisex]" [ref=e385] [cursor=pointer]:
+                  - /url: /products/3-t-shirt-in-red-unisex
+              - generic [ref=e389]:
+                - generic [ref=e390]: Regular price
+                - generic [ref=e391]: MRP ₹ 3,500.00
+        - listitem [ref=e392]:
+          - generic [ref=e394]:
+            - generic [ref=e397]:
+              - img "3 T-shirt in Black [Unisex]" [ref=e398]
+              - img "3 T-shirt in Black [Unisex]" [ref=e399]
+            - generic [ref=e402]:
+              - heading [level=3] [ref=e403]:
+                - link "3 T-shirt in Black [Unisex]" [ref=e404] [cursor=pointer]:
+                  - /url: /products/3-t-shirt-in-black-unisex
+              - generic [ref=e408]:
+                - generic [ref=e409]: Regular price
+                - generic [ref=e410]: MRP ₹ 3,500.00
+        - listitem [ref=e411]:
+          - generic [ref=e413]:
+            - generic [ref=e416]:
+              - img "Seersucker Shirt in Race Stripes" [ref=e417]
+              - img "Seersucker Shirt in Race Stripes" [ref=e418]
+            - generic [ref=e421]:
+              - heading [level=3] [ref=e422]:
+                - link "Seersucker Shirt in Race Stripes" [ref=e423] [cursor=pointer]:
+                  - /url: /products/seersucker-shirt-in-race-stripes
+              - generic [ref=e427]:
+                - generic [ref=e428]: Regular price
+                - generic [ref=e429]: MRP ₹ 5,000.00
+        - listitem [ref=e430]:
+          - generic [ref=e432]:
+            - generic [ref=e435]:
+              - img "Seersucker Shirt in Sunset Stripes" [ref=e436]
+              - img "Seersucker Shirt in Sunset Stripes" [ref=e437]
+            - generic [ref=e440]:
+              - heading [level=3] [ref=e441]:
+                - link "Seersucker Shirt in Sunset Stripes" [ref=e442] [cursor=pointer]:
+                  - /url: /products/seersucker-shirt-in-sunset-stripes
+              - generic [ref=e446]:
+                - generic [ref=e447]: Regular price
+                - generic [ref=e448]: MRP ₹ 5,000.00
+        - listitem [ref=e449]:
+          - generic [ref=e451]:
+            - generic [ref=e454]:
+              - img "Malfy Stripes Shirt" [ref=e455]
+              - img "Malfy Stripes Shirt" [ref=e456]
+            - generic [ref=e459]:
+              - heading [level=3] [ref=e460]:
+                - link "Malfy Stripes Shirt" [ref=e461] [cursor=pointer]:
+                  - /url: /products/malfy-stripes-shirt
+              - generic [ref=e465]:
+                - generic [ref=e466]: Regular price
+                - generic [ref=e467]: MRP ₹ 5,000.00
+        - listitem [ref=e468]:
+          - generic [ref=e470]:
+            - generic [ref=e473]:
+              - img "Kings Cap in Coffee" [ref=e474]
+              - img "Kings Cap in Coffee" [ref=e475]
+            - generic [ref=e478]:
+              - heading [level=3] [ref=e479]:
+                - link "Kings Cap in Coffee" [ref=e480] [cursor=pointer]:
+                  - /url: /products/kings-cap-in-coffee
+              - generic [ref=e484]:
+                - generic [ref=e485]: Regular price
+                - generic [ref=e486]: MRP ₹ 2,500.00
+        - listitem [ref=e487]:
+          - generic [ref=e489]:
+            - generic [ref=e492]:
+              - img "Kantha Basic T-shirt in Black [Unisex]" [ref=e493]
+              - img "Kantha Basic T-shirt in Black [Unisex]" [ref=e494]
+            - generic [ref=e497]:
+              - heading [level=3] [ref=e498]:
+                - link "Kantha Basic T-shirt in Black [Unisex]" [ref=e499] [cursor=pointer]:
+                  - /url: /products/kantha-basic-t-shirt-in-black-unisex
+              - generic [ref=e503]:
+                - generic [ref=e504]: Regular price
+                - generic [ref=e505]: MRP ₹ 4,000.00
+        - listitem [ref=e506]:
+          - generic [ref=e508]:
+            - generic [ref=e511]:
+              - img "Patch Effect T-shirt in Cream [Unisex]" [ref=e512]
+              - img "Patch Effect T-shirt in Cream [Unisex]" [ref=e513]
+            - generic [ref=e516]:
+              - heading [level=3] [ref=e517]:
+                - link "Patch Effect T-shirt in Cream [Unisex]" [ref=e518] [cursor=pointer]:
+                  - /url: /products/patch-effect-t-shirt-in-cream-unisex
+              - generic [ref=e522]:
+                - generic [ref=e523]: Regular price
+                - generic [ref=e524]: MRP ₹ 4,000.00
+        - listitem [ref=e525]:
+          - generic [ref=e527]:
+            - generic [ref=e530]:
+              - img "Glazed T-shirt in Sage Green [Unisex]" [ref=e531]
+              - img "Glazed T-shirt in Sage Green [Unisex]" [ref=e532]
+            - generic [ref=e535]:
+              - heading [level=3] [ref=e536]:
+                - link "Glazed T-shirt in Sage Green [Unisex]" [ref=e537] [cursor=pointer]:
+                  - /url: /products/glazed-t-shirt-in-sage-green-unisex
+              - generic [ref=e541]:
+                - generic [ref=e542]: Regular price
+                - generic [ref=e543]: MRP ₹ 4,000.00
+        - listitem [ref=e544]:
+          - generic [ref=e546]:
+            - generic [ref=e549]:
+              - img "Glazed T-shirt in Purple [Unisex]" [ref=e550]
+              - img "Glazed T-shirt in Purple [Unisex]" [ref=e551]
+            - generic [ref=e554]:
+              - heading [level=3] [ref=e555]:
+                - link "Glazed T-shirt in Purple [Unisex]" [ref=e556] [cursor=pointer]:
+                  - /url: /products/glazed-t-shirt-in-purple-unisex
+              - generic [ref=e560]:
+                - generic [ref=e561]: Regular price
+                - generic [ref=e562]: MRP ₹ 4,000.00
+      - link "View all products in the Products collection" [ref=e564] [cursor=pointer]:
+        - /url: /collections/all
+        - text: View all
+  - contentinfo [ref=e566]:
+    - generic [ref=e567]:
+      - generic [ref=e569]:
+        - heading "Quick links" [level=2] [ref=e570]
+        - list [ref=e571]:
+          - listitem [ref=e572]:
+            - link "FAQ's" [ref=e573] [cursor=pointer]:
+              - /url: /pages/faqs-1
+          - listitem [ref=e574]:
+            - link "Terms of Service" [ref=e575] [cursor=pointer]:
+              - /url: /policies/terms-of-service
+          - listitem [ref=e576]:
+            - link "Return / Exchange policy" [ref=e577] [cursor=pointer]:
+              - /url: /policies/refund-policy
+          - listitem [ref=e578]:
+            - link "Shipping Policy" [ref=e579] [cursor=pointer]:
+              - /url: /policies/shipping-policy
+          - listitem [ref=e580]:
+            - link "Privacy Policy" [ref=e581] [cursor=pointer]:
+              - /url: /policies/privacy-policy
+      - generic [ref=e583]:
+        - heading "Subscribe to our emails" [level=2] [ref=e584]
+        - generic [ref=e587]:
+          - textbox "Email" [ref=e588]
+          - generic: Email
+          - button "Subscribe" [ref=e589] [cursor=pointer]
+    - generic [ref=e595]:
+      - generic [ref=e596]:
+        - text: © 2026,
+        - link "Beyond Extremes" [ref=e597] [cursor=pointer]:
+          - /url: /
+      - link "Powered by Shopify" [ref=e599] [cursor=pointer]:
+        - /url: https://www.shopify.com?utm_campaign=poweredby&utm_medium=shopify&utm_source=onlinestore
+  - generic:
+    - generic:
+      - generic [ref=e600] [cursor=pointer]
+      - generic: Hello!
+      - generic:
+        - textbox "Send a message…"
